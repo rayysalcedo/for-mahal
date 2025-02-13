@@ -29,19 +29,26 @@
         }
         button {
             font-size: 20px;
-            padding: 10px 20px;
+            padding: 15px 25px;
             margin: 10px;
             border: none;
             cursor: pointer;
-            border-radius: 10px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        #yesBtn {
+        #taraBtn {
             background-color: #ff4d6d;
             color: white;
+            font-weight: bold;
+        }
+        #taraBtn:hover {
+            background-color: #d63384;
+            transform: scale(1.1);
         }
         #noBtn {
             background-color: #6c757d;
             color: white;
+            font-weight: bold;
         }
         #reaction {
             margin-top: 20px;
@@ -67,7 +74,7 @@
             <h1>HI MAHAL!</h1>
             <p>ANO MUNA PASSWORD?</p>
             <input type="password" id="passwordInput" placeholder="Enter Password" />
-            <button id="loginBtn">Login</button>
+            <button id="taraBtn">TARA!</button>
             <p id="errorMessage" style="color: red; display: none;">Incorrect Password. Try Again.</p>
         </div>
 
@@ -85,7 +92,7 @@
 
     <script>
         // Password verification
-        document.getElementById("loginBtn").addEventListener("click", function() {
+        document.getElementById("taraBtn").addEventListener("click", function() {
             const password = document.getElementById("passwordInput").value;
             if (password === "natsusnow") {
                 document.getElementById("passwordScreen").style.display = "none"; // Hide the password screen
@@ -97,7 +104,7 @@
 
         // Valentine's page behavior
         document.getElementById("yesBtn").addEventListener("click", function() {
-            document.getElementById("reaction").innerText = "YOWN! SEE YOU SA VALENTINES DATE NATIN! 💖";
+            document.getElementById("reaction").innerText = "YOWN! MAHAL NA MAHAL KITA 💖";
             document.getElementById("reaction").style.display = "block";
             document.getElementById("gif").src = "https://media.giphy.com/media/MLN293JG7qZgfByKNz/giphy.gif";
             document.getElementById("gif").style.display = "block";
